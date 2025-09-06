@@ -6,6 +6,7 @@ import HomeHeader from '../../components/shared/HomeHeader';
 import TodayProgress from '../../components/TodayProgress';
 import GenerateRecipeCard from '../../components/GenerateRecipeCard';
 import TodaysMealPlan from '../../components/TodaysMealPlan';
+import { FlatList } from 'react-native-web';
 
 export default function Home() {
     const {user}=useContext(UserContext);
@@ -16,6 +17,11 @@ export default function Home() {
       }
     },[user])
   return (
+    <FlatList
+    data={[]}
+    renderItem={()=>null}
+    ListHeaderComponent={
+    
     <View style={{
       padding:20,
       paddingTop:25 }}>
@@ -23,6 +29,8 @@ export default function Home() {
       <TodayProgress/>
       <GenerateRecipeCard/>
       <TodaysMealPlan/>
-    </View>
+    </View>}
+    >
+    </FlatList>
   )
 }

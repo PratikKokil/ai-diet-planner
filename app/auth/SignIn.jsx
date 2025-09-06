@@ -1,5 +1,5 @@
 import { View, Text, Image, Alert } from "react-native";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Button from "../../components/shared/Button";
 import Input from "../../components/shared/Input";   
 import { Link, useRouter } from "expo-router";
@@ -33,8 +33,8 @@ export default function SignIn() {
       .catch(() => {
         Alert.alert("Incorrect email or password", "Please try again");
       });
+       
   };
-
   return (
     <View style={{ padding: 20, flex: 1 }}>
       <View style={{ display: "flex", alignItems: "center" }}>

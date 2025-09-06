@@ -33,7 +33,7 @@ export default function Preferance() {
       gneder:gender,
       goal:goal
     }
-
+   
     const PROMT=JSON.stringify(data)+Prompt.CALORIES_PROMPT
     const AIResult = await CalculateCaloriesAI(PROMT)
     console.log(AIResult.choices[0].message.content)

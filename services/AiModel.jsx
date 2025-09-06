@@ -1,3 +1,4 @@
+import axios from "axios";
 import OpenAI from "openai"
 
 const openai = new OpenAI({
@@ -22,9 +23,21 @@ export   const generateAIRecipe =async(PROMT)=> await openai.chat.completions.cr
     response_format:"json_object"
   })
 
-  // export const response = await ai.models.generateContent({
-  //   model: "gemini-2.5-flash",
-  //   contents: "Explain how AI works in a few words",
-  // });
+const BASE_URL='https://aigurulab.tech';
+export const GenerateRecipeImage=async(prompt) => await axios.post(BASE_URL+'/api/generate-image',
+        {
+            width: 1024,
+            height: 1024,
+            input: prompt,
+            model: 'sdxl',
+            aspectRatio:"1:1"
+        },
+        {
+            headers: {
+                'x-api-key': process.env.EXPO_PUBLIC_AIRGURU_LAB_API_KEY, 
+                'Content-Type': 'application/json', 
+            },
+        }
+      )
 
 
