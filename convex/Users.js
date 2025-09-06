@@ -31,3 +31,26 @@ export const GetUser= query({
         .unique();
         return user;
     }})
+
+export const UpdateUserPref = mutation({
+  args: {
+    uid: v.id("users"),
+    weight: v.number(),
+    height: v.number(), 
+    gneder: v.string(),
+    goal: v.string(),
+    calories:v.optional(v.number()),
+    proteins:v.optional(v.number()),
+  },
+  handler:async(ctx,args)=>{
+    const result = await ctx.db.patch(args.uid,{
+      height:args.height,
+      weight:args.weight,
+      goal:args.goal,
+      gender:args.gneder,
+      calories:args.calories,
+      proteins:args.proteins
+    } );
+    return result;
+  }
+})
