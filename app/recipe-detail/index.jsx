@@ -6,7 +6,7 @@ import { api } from '../../convex/_generated/api';
 
 export default function RecipeDetail() {
   const { recipeId } = useLocalSearchParams();
-  const recipe = useQuery(api.recipes.getById, { id: recipeId });
+  const recipe = useQuery(api.Recipes.getById, { id: recipeId });
   const [data, setData] = useState(null);
 
   useEffect(() => {

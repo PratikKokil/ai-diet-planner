@@ -33,7 +33,7 @@ export default function GenerateRecipeCard() {
         padding:10,
         borderRadius:10,
         marginTop:10,
-        width:180,
+        width:185,
         display:'flex',
         flexDirection:'row',
         alignItems:'center',

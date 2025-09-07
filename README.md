@@ -1,53 +1,64 @@
-# Welcome to your Expo app 👋
+# 🍽️ AI Diet Planner
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An AI-powered mobile app built with **React Native (Expo)** and **Convex backend** that helps users plan, track, and review their daily meals.  
+The app generates and manages personalized meal plans, tracks calorie intake, and monitors daily progress.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Features
 
-   ```bash
-   npm install
-   ```
+- 📅 **Daily Meal Plans**
+  - View personalized meal plans for Breakfast, Lunch, Dinner, and Snacks.
+  - Add meals from recipes directly to your daily plan.
 
-2. Start the app
+- ➕ **Add Meal Plan Feature**
+  - Pick a recipe and add it to your plan with:
+    - Date selector
+    - Meal type (Breakfast, Lunch, Dinner, Snack)
+    - Calories auto-filled from recipe
 
-   ```bash
-   npx expo start
-   ```
+- 📊 **Progress Tracking**
+  - Track total daily calorie intake.
+  - See how you performed vs. your calorie goals.
+  - Visual overview of progress in the **Progress** tab.
 
-In the output, you'll find options to open the app in a
+- 🔍 **Review Past Days**
+  - Select any past date to review:
+    - Meals eaten
+    - Total calories consumed
+    - Meal types breakdown
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📸 App Preview
 
-## Get a fresh project
+> Add your screenshots in `assets/images/` folder and update the file names here.
 
-When you're ready, run:
+### 🔑 Authentication
+![Sign In](assets/screenshots/Screenshot_20250907_204211.png)  
+![Sign Up](assets/screenshots/Screenshot_20250907_204510.png)  
 
-```bash
-npm run reset-project
-```
+### 🏠 Home & Recipes
+![Home Screen](assets/screenshots/Screenshot_20250907_204546.png)  
+![Recipe Detail](assets/screenshots/Screenshot_20250907_204823.png)  
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 📅 Meal Plan
+![Daily Meal Plan](assets/screenshots/Screenshot_20250907_204546.png)  
+![Add Meal Plan](assets/screenshots/Screenshot_20250907_204606.png)  
+![Add Meal Plan](assets/screenshots/Screenshot_20250907_204653.png) 
 
-## Learn more
+### 📊 Progress
+![Progress Tracker](assets/screenshots/Screenshot_20250907_204711.png) 
+### AI Suggestions 
+![Recipe Detail](assets/screenshots/Screenshot_20250907_204823.png)  
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🛠️ Tech Stack
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- **Frontend:** React Native (Expo), React Navigation, Hugeicons, DateTimePicker  
+- **Backend:** [Convex](https://convex.dev) (User DB, Recipes DB, Meal Plan DB)  
+- **Storage:** Firebase (recipe images)  
+- **Auth:** Expo Auth (SignIn / SignUp)  
+- **State Management:** React Context API  
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-
-
- [{"_creationTime": 1757185303882.2876, "_id": "jd767rr3ztcsez00rx2jkrkwt57q3y3z", "date": "2025-09-07", "mealType": "Dinner", "recipe": {"_creationTime": 1757184152769.7212, "_id": "j976a26dzwc19d7yp51ar7y2x57q2810", "imageUrl": "https://firebasestorage.googleapis.com/v0/b/projects-2025-71366.firebasestorage.app/o/ai-guru-lab-images%2F1757185025359.png?alt=media&token=30e6be7b-ba8e-43a5-a9c4-a7365c28104d%5C", "jsonData": [Object], "recipeName": "Creamy Butter Veg Curry", "uid": "j57732nrhp5xc58pb4dpctb8q97q3m70"}, "recipeId": "j976a26dzwc19d7yp51ar7y2x57q2810", "uid": "j57732nrhp5xc58pb4dpctb8q97q3m70"}]
+---
