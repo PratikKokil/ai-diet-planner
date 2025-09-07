@@ -1,23 +1,25 @@
 import { View, Text, Image, TouchableOpacity, Alert } from 'react-native';
-import React from 'react';
+import React, { useContext } from 'react';
 import { CheckmarkSquare02Icon, SquareIcon } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react-native';
 import { useMutation } from 'convex/react';
 import { api } from '../convex/_generated/api';
+import { RefreshDataContext } from '../context/RefreshDataContext';
 
-export default function MealPlanCard({ mealPlanInfo, refreshData }) {
+export default function MealPlanCard({ mealPlanInfo }) {
   const { mealType, recipe } = mealPlanInfo;
   const updateStatus = useMutation(api.MealPlan.updateStatus);
-
+  const{refreshData,setRefreshData}=useContext(RefreshDataContext)
   const onCheck = async (status) => {
     try {
       await updateStatus({
         id: mealPlanInfo?._id,
         status,
         calories:recipe?.jsonData?.calories
+        
       });
       Alert.alert('Great!', 'Status Updated!');
-      refreshData();
+      setRefreshData(Date.now())
     } catch (err) {
       Alert.alert('Error', err.message);
     }

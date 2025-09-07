@@ -8,16 +8,18 @@ import { api } from '../convex/_generated/api';
 import moment from 'moment';
 import { UserContext } from '../context/UserContext';
 import MealPlanCard from './MealPlanCard';
+import { RefreshDataContext } from '../context/RefreshDataContext';
 
 export default function TodaysMealPlan() {
   const [mealPlan, setMealPlan] = useState([]);
   const [loading, setLoading] = useState(true);
   const convex = useConvex();
   const { user } = useContext(UserContext);
-
+  const{refreshData,setRefreshData}=useContext(RefreshDataContext)
+  
   useEffect(() => {
     user && GetTodaysMealPlan();
-  }, [user]);
+  }, [user,refreshData]);
 
   const GetTodaysMealPlan = async () => {
     try {
@@ -26,7 +28,7 @@ export default function TodaysMealPlan() {
         date: moment().format('YYYY-MM-DD'),
         uid: user?._id,
       });
-      console.log('Meal plan result:', result);
+ 
       setMealPlan(result || []);
     } catch (error) {
       console.log(error);
@@ -69,7 +71,7 @@ export default function TodaysMealPlan() {
         <FlatList
           data={mealPlan}
           keyExtractor={(item) => item._id}
-          renderItem={({ item }) => <MealPlanCard mealPlanInfo={item} refreshData={(GetTodaysMealPlan)}/>}
+          renderItem={({ item }) => <MealPlanCard mealPlanInfo={item} />}
           style={{ marginTop: 15 }}
         />
       )}

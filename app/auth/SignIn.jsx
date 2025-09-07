@@ -8,6 +8,7 @@ import { auth } from "../../services/FirebaseConfig";
 import { useConvex } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import { UserContext } from "../../context/UserContext";
+import { GenerateRecipeImage } from "../../services/AiModel";
 
 export default function SignIn() {
   const [email, setEmail] = useState("pratik@gmail.com");
@@ -16,6 +17,20 @@ export default function SignIn() {
   const { setUser } = useContext(UserContext);
   const router = useRouter();
 
+  //  useEffect(()=>{
+  //   try {
+  //      fetchData()
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+     
+  //   },[])
+  //   const fetchData=async()=>{
+  //     const prompt="Caesar Salad dish"
+  //     const aiImageResp=await GenerateRecipeImage(prompt);
+  //     console.log(aiImageResp?.data?.image)
+  //   }
+    
   const onSignIn = () => {
     if (!email || !password) {
       Alert.alert("Please fill all the fields");

@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text,FlatList } from 'react-native'
 import React, { useContext, useEffect } from 'react'
 import { UserContext } from '../../context/UserContext'
 import { useRouter } from 'expo-router';
@@ -6,7 +6,6 @@ import HomeHeader from '../../components/shared/HomeHeader';
 import TodayProgress from '../../components/TodayProgress';
 import GenerateRecipeCard from '../../components/GenerateRecipeCard';
 import TodaysMealPlan from '../../components/TodaysMealPlan';
-import { FlatList } from 'react-native-web';
 
 export default function Home() {
     const {user}=useContext(UserContext);

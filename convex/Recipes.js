@@ -24,3 +24,9 @@ export const getById = query({
     return await ctx.db.get(args.id);
   },
 });
+export const GetAllrecipes = query({
+  handler:async(ctx,args)=>{
+    const result = await ctx.db.query('recipes').collect();
+    return result
+  }
+})
