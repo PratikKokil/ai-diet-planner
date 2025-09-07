@@ -32,25 +32,34 @@ The app generates and manages personalized meal plans, tracks calorie intake, an
 
 ## 📸 App Preview
 
-> Add your screenshots in `assets/images/` folder and update the file names here.
-
 ### 🔑 Authentication
-![Sign In](assets/screenshots/Screenshot_20250907_204211.png)  
-![Sign Up](assets/screenshots/Screenshot_20250907_204510.png)  
+<p float="left">
+  <img src="assets/screenshots/Screenshot_20250907_204211.png" alt="Sign In" width="250"/>
+  <img src="assets/screenshots/Screenshot_20250907_204510.png" alt="Sign Up" width="250"/>
+</p>
 
 ### 🏠 Home & Recipes
-![Home Screen](assets/screenshots/Screenshot_20250907_204546.png)  
-![Recipe Detail](assets/screenshots/Screenshot_20250907_204823.png)  
+<p float="left">
+  <img src="assets/screenshots/Screenshot_20250907_204546.png" alt="Home Screen" width="250"/>
+  <img src="assets/screenshots/Screenshot_20250907_204823.png" alt="Recipe Detail" width="250"/>
+</p>
 
 ### 📅 Meal Plan
-![Daily Meal Plan](assets/screenshots/Screenshot_20250907_204546.png)  
-![Add Meal Plan](assets/screenshots/Screenshot_20250907_204606.png)  
-![Add Meal Plan](assets/screenshots/Screenshot_20250907_204653.png) 
+<p float="left">
+  <img src="assets/screenshots/Screenshot_20250907_204546.png" alt="Daily Meal Plan" width="250"/>
+  <img src="assets/screenshots/Screenshot_20250907_204606.png" alt="Add Meal Plan 1" width="250"/>
+</p>
+
+<p float="left">
+  <img src="assets/screenshots/Screenshot_20250907_204653.png" alt="Add Meal Plan 2" width="250"/>
+</p>
 
 ### 📊 Progress
-![Progress Tracker](assets/screenshots/Screenshot_20250907_204711.png) 
-### AI Suggestions 
-![Recipe Detail](assets/screenshots/Screenshot_20250907_204823.png)  
+<p float="left">
+  <img src="assets/screenshots/Screenshot_20250907_204711.png" alt="Progress Tracker" width="250"/>
+  <img src="assets/screenshots/Screenshot_20250907_204823.png" alt="AI Suggestions" width="250"/>
+</p>
+
 ---
 
 ## 🛠️ Tech Stack
